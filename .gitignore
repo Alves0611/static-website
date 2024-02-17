@@ -7,6 +7,7 @@ terraform.tfstate
 bin/
 modules-dev/
 /pkg/
+website
 website/.vagrant
 website/.bundle
 website/build
@@ -42,3 +43,4 @@ plan.tfout
 .terraform.lock.hcl
 
 .terraform.tfstate.lock.info
+
