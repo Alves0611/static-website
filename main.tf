@@ -3,7 +3,7 @@ provider "aws" {
 
   default_tags {
     tags = {
-      "Module"     = "Auto Scaling App"
+      "Module"     = "Static website"
       "ManagedBy"  = "Terraform"
     }
   }
