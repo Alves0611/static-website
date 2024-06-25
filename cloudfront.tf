@@ -7,7 +7,7 @@ resource "aws_cloudfront_origin_access_control" "this" {
 }
 
 resource "aws_cloudfront_distribution" "this" {
-  aliases                         = []
+  aliases                         = local.has_domain ? [local.domain_name] : []
   comment                         = "Managed by Terraform"
   continuous_deployment_policy_id = null
   default_root_object             = "index.html"
@@ -54,7 +54,7 @@ resource "aws_cloudfront_distribution" "this" {
       restriction_type = "none"
     }
   }
-  
+
   viewer_certificate {
     acm_certificate_arn            = null
     cloudfront_default_certificate = true
